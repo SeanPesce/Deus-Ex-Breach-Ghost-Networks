@@ -22,7 +22,7 @@ from datetime import datetime, timedelta
 
 
 MISSING_NETWORKS = []
-DIR = '..'
+DIR = os.path.join('..', 'ghost_networks')
 FNAME_PREFIX = ''
 # Release date of Ghost Networks feature:
 # https://www.rockpapershotgun.com/deus-ex-breach-launches-random-daily-networks
