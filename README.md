@@ -2,7 +2,7 @@
 
 This repository serves as an archive of all official [Deus Ex: Breach](https://store.steampowered.com/app/555450/) daily Ghost Networks since the day the feature was released ([2017-07-14](https://www.rockpapershotgun.com/deus-ex-breach-launches-random-daily-networks)).  
 
-Note that the JSON data has been left in the original format provided by the real-world upstream server; it has not been beautified. This is because the JSON parser in the game is finicky and will usually fail to parse the data if the formatting is changed.  To beautify JSON data, use a tool such as [CodeBeautify.org](https://codebeautify.org/jsonviewer)  or use Python from the command line:  
+Note that the JSON data has been left in the original format provided by the real-world upstream server; it has not been beautified. This is because the JSON parser in the game is finicky and will sometimes fail to parse the data if the formatting is changed.  To beautify JSON data, use a tool such as [CodeBeautify.org](https://codebeautify.org/jsonviewer)  or use Python from the command line:  
 
 ```
 python -m json.tool 2017-02-14.json
