@@ -1,0 +1,103 @@
+{
+"d" : {
+"__metadata" : {
+"uri" : "http://dxbreach.os.eidos.com:443/api/GenericDtoResult(211999L)", "type" : "game.GenericDtoResult"
+}, "i64_resultId" : 211999, "i32_code" : 0, "s_message" : "ok", "c_dto" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworkDTO"
+}, "s_id" : "6475e7f5bf90835df41e5f3e", "i32_layout" : 0, "dto_created" : "datetimeoffset'2023-05-30T12:11:32Z'", "dto_ghostNetworkDate" : "datetimeoffset'2023-06-01T00:00:00Z'", "i32_effectiveDaySinceEpoch" : 19509, "dto_expirationDate" : "datetimeoffset'2023-06-02T00:00:00Z'", "i32_difficultyTier" : 5, "c_nodes" : {
+"__metadata" : {
+"type" : "java.util.HashMap"
+}, "c_0" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1050198, "i32_nodeId" : 0, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}
+}
+}, "c_1" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1000173, "i32_nodeId" : 1, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}
+}
+}, "c_2" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1000111, "i32_nodeId" : 2, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 64
+}
+}, "c_3" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1050162, "i32_nodeId" : 3, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}
+}
+}, "c_4" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1050188, "i32_nodeId" : 4, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 6
+}
+}, "c_5" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1000165, "i32_nodeId" : 5, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 27
+}
+}, "c_6" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1000106, "i32_nodeId" : 6, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 63
+}
+}, "c_7" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1050081, "i32_nodeId" : 7, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}
+}
+}, "c_8" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1050221, "i32_nodeId" : 8, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 23
+}
+}, "c_9" : {
+"__metadata" : {
+"type" : "com.see.game.ghostnetworks.dtos.GhostNetworksNode"
+}, "i32_mapSettingId" : 1000117, "i32_nodeId" : 9, "c_modifiers" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i64_0" : 2, "i64_1" : 19
+}
+}
+}, "c_normalRewardNodes" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i32_0" : 0, "i32_1" : 1, "i32_2" : 2, "i32_3" : 3, "i32_4" : 4
+}, "c_worldRewardNodes" : {
+"__metadata" : {
+"type" : "java.util.ArrayList"
+}, "i32_0" : 1000
+}
+}
+}
+}
