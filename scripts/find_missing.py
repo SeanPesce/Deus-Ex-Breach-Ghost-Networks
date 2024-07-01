@@ -8,8 +8,11 @@ Note that Ghost Networks were seemingly never generated (by Eidos/Square Enix) f
     [2020-08-11, 2020-08-26]
     [2020-11-19, 2020-11-23]
     [2020-12-01, 2020-12-06]
+    [2021-12-20, 2022-01-04]
+    [2023-01-11, 2023-01-11]
+    [2024-06-20, 2024-06-24]
 
-Therefore, this script will always determine that there are at least 27 missing Ghost Networks.
+Therefore, this script will always determine that there are at least 49 missing Ghost Networks.
 
 Evidence for missing Ghost Networks:
     August/November 2020: https://steamcommunity.com/app/337000/discussions/0/3862353324242873119/
