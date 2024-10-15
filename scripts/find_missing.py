@@ -4,7 +4,7 @@
 """
 Iterate through dates to determine which daily Ghost Network configurations are missing
 
-Note that Ghost Networks were seemingly never generated (by Eidos/Square Enix) for the following date ranges:
+Note that Ghost Networks were seemingly never generated (by Eidos/Square Enix) for the following (inclusive) date ranges:
     [2020-08-11, 2020-08-26]
     [2020-11-19, 2020-11-23]
     [2020-12-01, 2020-12-06]
@@ -12,8 +12,9 @@ Note that Ghost Networks were seemingly never generated (by Eidos/Square Enix) f
     [2023-01-11, 2023-01-11]
     [2024-06-20, 2024-06-24]
     [2024-08-27, 2024-09-10]
+    [2024-10-09, 2024-10-14]
 
-Therefore, this script will always determine that there are at least 64 missing Ghost Networks.
+Therefore, this script will always determine that there are at least 70 missing Ghost Networks.
 
 Evidence for missing Ghost Networks:
     August/November 2020: https://steamcommunity.com/app/337000/discussions/0/3862353324242873119/
