@@ -16,6 +16,7 @@ import argparse
 import json
 from pathlib import Path
 import sys
+import time
 
 import requests
 
@@ -23,6 +24,7 @@ import requests
 APP_ID = "337000"
 ENDPOINT = "GhostNetworks_GetTodaysGhostNetwork"
 FIXED_VALUE = "1"
+LOOP_INTERVAL_SECONDS = 86400
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,6 +41,11 @@ def parse_args() -> argparse.Namespace:
         "--endpoint",
         default=ENDPOINT,
         help=f"Endpoint to call. Defaults to {ENDPOINT}.",
+    )
+    parser.add_argument(
+        "--loop",
+        action="store_true",
+        help="Keep running and fetch the network every 24 hours.",
     )
     return parser.parse_args()
 
@@ -108,14 +115,21 @@ def fetch_ghost_network(output_dir: Path | None, endpoint: str) -> tuple[bytes, 
 
 def main() -> int:
     args = parse_args()
-    payload, output_path = fetch_ghost_network(args.output_dir, args.endpoint)
-    if output_path is None:
-        sys.stdout.buffer.write(payload)
-        if not payload.endswith(b"\n"):
-            sys.stdout.buffer.write(b"\n")
-        return 0
-    print(f"Saved Ghost Network to {output_path}")
-    return 0
+    while True:
+        payload, output_path = fetch_ghost_network(args.output_dir, args.endpoint)
+        if output_path is None:
+            sys.stdout.buffer.write(payload)
+            if not payload.endswith(b"\n"):
+                sys.stdout.buffer.write(b"\n")
+            sys.stdout.flush()
+        else:
+            print(f"Saved Ghost Network to {output_path}")
+
+        if not args.loop:
+            return 0
+
+        print(f"Sleeping {LOOP_INTERVAL_SECONDS} seconds before next fetch...")
+        time.sleep(LOOP_INTERVAL_SECONDS)
 
 
 if __name__ == "__main__":
