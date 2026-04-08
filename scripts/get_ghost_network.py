@@ -25,6 +25,7 @@ APP_ID = "337000"
 ENDPOINT = "GhostNetworks_GetTodaysGhostNetwork"
 FIXED_VALUE = "1"
 LOOP_INTERVAL_SECONDS = 86400
+RETRY_INTERVAL_SECONDS = 900
 
 
 def parse_args() -> argparse.Namespace:
@@ -116,7 +117,17 @@ def fetch_ghost_network(output_dir: Path | None, endpoint: str) -> tuple[bytes, 
 def main() -> int:
     args = parse_args()
     while True:
-        payload, output_path = fetch_ghost_network(args.output_dir, args.endpoint)
+        try:
+            payload, output_path = fetch_ghost_network(args.output_dir, args.endpoint)
+        except requests.RequestException:
+            if not args.loop:
+                raise
+            print(
+                f"Request failed. Sleeping {RETRY_INTERVAL_SECONDS} seconds before retry..."
+            )
+            time.sleep(RETRY_INTERVAL_SECONDS)
+            continue
+
         if output_path is None:
             sys.stdout.buffer.write(payload)
             if not payload.endswith(b"\n"):
