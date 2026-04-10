@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
+import re
 import sys
 import time
 
@@ -108,6 +109,8 @@ def fetch_ghost_network(output_dir: Path | None, endpoint: str) -> tuple[bytes, 
         return payload, None
 
     network_date = ghost_network["d"]["c_dto"]["dto_ghostNetworkDate"][15:25]
+    if re.fullmatch(r"\d{4}-\d{2}-\d{2}", network_date) is None:
+        raise RuntimeError(f"Bad ghost network date: {network_date!r}")
     output_dir.mkdir(parents=True, exist_ok=True)
     output_path = output_dir / f"{network_date}.json"
     output_path.write_bytes(payload)
